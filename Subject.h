@@ -5,12 +5,12 @@
 #ifndef ELABORATO_SUBJECT_H
 #define ELABORATO_SUBJECT_H
 
-
+#include "memory"
 #include "Observer.h"
 
 class Subject {
 public:
-    virtual ~Subject()=0;
+    virtual ~Subject()=default;
 
     virtual void subscribe(Observer* o)=0;
     virtual void unsubscribe(Observer* o)=0;
